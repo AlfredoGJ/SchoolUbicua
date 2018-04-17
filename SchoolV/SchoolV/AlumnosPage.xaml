@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolV.AlumnosPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="alumnosList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FullName}}" Detail="{Binding id}">
+
+                        </TextCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Button Text="Add" BackgroundColor="#2ed73a"
+                    Clicked="GoEdit"
+                    />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

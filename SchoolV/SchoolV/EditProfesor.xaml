@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolV.EditProfesor">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="nombre" Placeholder="Nombre"/>
+            <Entry x:Name="paterno" Placeholder="Apellido Paterno"/>
+            <Entry x:Name="materno" Placeholder="Apellido Materno"/>
+            <Entry x:Name="titulo" Placeholder="Titulo"/>
+            <Button x:Name="agregar" Text="Add" Clicked="UpdateProfesor"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolV.EdotGrupo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Nombre del grupo" x:Name="nombre"/>
+            <Picker SelectedItem="0" Title="Profesor" x:Name="profesorsList">
+                       
+            </Picker>
+            
+            <ListView x:Name="alumnosList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                             <StackLayout Orientation ="Vertical">
+                                 
+                            <Label Text="{Binding FullName}"/>
+                                <Label Text="{Binding id} " />
+                                </StackLayout>
+                                <Switch Toggled="Switch_Toggled" />
+                            </StackLayout>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+            <Button Text="Agregar grupo" TextColor="White" BackgroundColor="Green" Clicked="AddGrupo"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
